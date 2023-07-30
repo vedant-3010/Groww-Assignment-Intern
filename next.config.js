@@ -1,6 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const withImages = require('next-images');
+module.exports = withImages();
 
-module.exports = nextConfig
+// next.config.js
+module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: '/user/:userId',
+        destination: '/user/[userId]',
+      },
+    ];
+  },
+};
