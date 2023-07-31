@@ -7,49 +7,38 @@ import styles from '../styles/NewsFeed.module.css';
 import { fetchRandomPhotos, selectIsDataCached } from '../redux/newsFeedSlice';
 const NewsFeed = () => {
   const dispatch = useDispatch();
-  const [page, setPage] = useState(1);
-  const photos = useSelector((state) => state.newsFeed.photos);
-  const hasMore = useSelector((state) => state.newsFeed.hasMore);
-  const loading = useSelector((state) => state.newsFeed.loading);
-  const error = useSelector((state) => state.newsFeed.error);
-
-  // Check if data is cached
-  const isDataCached = useSelector(selectIsDataCached);
+  const { photos, loading, error, nextPage } = useSelector((state) => state.newsFeed);
 
   useEffect(() => {
-    // Fetch data only if not cached
-    if (!isDataCached) {
-      dispatch(fetchRandomPhotos(page));
-    }
-  }, [dispatch, page, isDataCached]);
+    dispatch(fetchRandomPhotos(nextPage));
+  }, [dispatch, nextPage]);
 
   const fetchMorePhotos = () => {
-    setPage(page + 1);
+    dispatch(fetchRandomPhotos(nextPage));
   };
 
   return (
     <div className={styles.newsFeedContainer}>
-      {isDataCached ? (
-        // Render photos from the Redux state if data is cached
-        <div>
-          {photos.map((photo) => (
-            <PhotoCard key={photo.id} photo={photo} />
-          ))}
-        </div>
-      ) : (
-        <InfiniteScroll
-          dataLength={photos.length}
-          next={fetchMorePhotos}
-          hasMore={hasMore}
-          loader={<LoadingSpinner />}
-          endMessage={<p>No more photos to load</p>}
-        >
-          {photos.map((photo) => (
-            <PhotoCard key={photo.id} photo={photo} />
-          ))}
-        </InfiniteScroll>
 
-      )}
+      <div>
+        {photos.map((photo) => (
+          <PhotoCard key={photo.id} photo={photo} />
+        ))}
+      </div>
+
+      <InfiniteScroll
+        dataLength={photos.length}
+        next={fetchMorePhotos}
+        hasMore={!loading && !error}
+        loader={<LoadingSpinner />}
+      >
+        {photos.map((photo) => (
+          <PhotoCard key={photo.id} photo={photo} />
+        ))}
+      </InfiniteScroll>
+
+
+      {loading && <LoadingSpinner />}
 
       {error && (
         <p>
