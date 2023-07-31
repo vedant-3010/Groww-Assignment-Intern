@@ -113,7 +113,7 @@
 
 
 /* Responsive Styles */
-@media (min-width: 768px) {
+@media (min-width: 400px) {
   .photocard {
     width: 90%;
     margin: 20px auto; /* Center the card and add 20% margin on each side */
