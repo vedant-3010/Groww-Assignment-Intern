@@ -1,0 +1,161 @@
+/* PostCard.css */
+
+.photocard {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  background-color: #fff;
+  margin: auto;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.userinfo {
+  display: flex;
+  align-items: center;
+  padding: 12px; /* Add padding to the user info section */
+}
+
+.usernamelocation {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px; /* Increase font size for the username */
+}
+
+.location {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #999;
+}
+
+.postimage {
+  width: 100%;
+  height: 400px;
+  object-fit: contain; /* Set to 'contain' to maintain aspect ratio */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #262626;
+}
+
+.photoinfo {
+  padding: 12px; /* Add padding to the photo info section */
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7; /* Set a background color for the photo info section */
+}
+
+.likes,
+.downloads {
+  display: flex; /* Display the icon and number side by side */
+  align-items: center; /* Center the elements vertically */
+}
+.urls {
+  margin: 10px 0;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+}
+.urls a {
+  display: block;
+  margin-bottom: 5px;
+  color: #909090; /* Set a primary color for links */
+  text-decoration: none;
+}
+
+.urls a:hover {
+  text-decoration: underline;
+}
+.likes span {
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.hearticon {
+  color: #e74c3c;
+  font-size: 19px;
+}
+
+.downloads span {
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.downloadicon {
+  color: #3fb72f;
+  font-size: 19px;
+}
+
+/* Add Instagram-like styles */
+.photoinfo {
+  background-color: #f7f7f7;
+}
+
+.photoinfo p {
+  color: #262626;
+}
+
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .photocard {
+    width: 90%;
+    margin: 20px auto; /* Center the card and add 20% margin on each side */
+  }
+  
+}
+
+@media (max-width: 622px) {
+  .photocard {
+    width: 85%; /* Adjust the width for smaller screens */
+    padding: 8px; /* Reduce the padding for mobile view */
+    margin: 20px auto;
+  }
+  .postimage {
+    width: 100%;
+    height: 300px;
+    object-fit: contain; /* Set to 'contain' to maintain aspect ratio */
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #262626;
+  }
+  .userinfo {
+    padding: 8px; /* Reduce the padding for mobile view */
+  }
+
+  .username {
+    font-size: 16px; /* Reduce font size for the username on smaller screens */
+  }
+
+  .location {
+    font-size: 14px; /* Reduce font size for the location on smaller screens */
+  }
+
+  .photoinfo {
+    padding: 8px; /* Reduce the padding for mobile view */
+  }
+
+  .likes span {
+    font-size: 13px; /* Reduce font size for icons and numbers on smaller screens */
+  }
+
+  .hearticon {
+    font-size: 16px; /* Reduce font size for the heart icon on smaller screens */
+  }
+}

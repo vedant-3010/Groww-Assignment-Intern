@@ -1,0 +1,5 @@
+/* styles/NewsFeed.module.css */
+.newsFeedContainer {
+    padding-top: 40px; /* Add padding to create space for the sticky Navbar */
+  }
+  

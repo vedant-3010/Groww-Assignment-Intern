@@ -1,0 +1,33 @@
+/* styles/PhotoCardGrid.module.css */
+
+  
+  .photoCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .postImage {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 5px;
+    background-color: black; /* Set the background color of the image to black */
+  }
+  
+
+  .imageDescription {
+    font-size: 14px;
+
+    color: rgb(67, 67, 67); /* Set the description text color to white */
+    text-align: center;
+    font-weight: 500;
+    text-align: center;
+  }
+  

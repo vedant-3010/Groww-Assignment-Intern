@@ -1,20 +1,22 @@
-// components/UserPhotos.js
-import React, { useState } from 'react';
+import React from 'react';
 import PhotoCard from './PhotoCard';
+import styles from '../styles/UserPhotos.module.css'; // Import the CSS module for styling
+import PhotoCardGrid from './PhotoCardGrid';
 
 const UserPhotos = ({ photos, gridView }) => {
+  
   return (
-    <div>
+    <div className={styles.userPhotos}>
       {gridView ? (
-        <div>
+        <div className={styles.gridContainer}>
           {photos.map((photo) => (
-            <PhotoCard key={photo.id} photo={photo} />
+            <PhotoCardGrid key={photo.id} photo={photo} />
           ))}
         </div>
       ) : (
-        <ul>
+        <ul className={styles.listContainer}>
           {photos.map((photo) => (
-            <li key={photo.id}>{photo.description}</li>
+            <PhotoCard key={photo.id} photo={photo} />
           ))}
         </ul>
       )}

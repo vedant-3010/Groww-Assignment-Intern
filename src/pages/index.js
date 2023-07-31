@@ -5,7 +5,6 @@ import NewsFeed from '../components/NewsFeed';
 const HomePage = () => {
   return (
     <div>
-      <h1>Unsplash App</h1>
       <NewsFeed />
     </div>
   );
