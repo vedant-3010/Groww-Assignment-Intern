@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '../styles/PhotoCard.module.css';
-import LazyLoad from 'react-lazyload';
+import LazyLoad from 'react-lazy-load"';
 
 const PhotoCard = ({ photo }) => {
   const { id, urls, user, likes, downloads, location, alt_description } = photo;
