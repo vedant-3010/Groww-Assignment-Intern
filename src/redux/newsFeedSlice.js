@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const API_KEY = process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY;
 
-const CACHE_DURATION = 60 * 100; // Cache data for 4 minute
+const CACHE_DURATION = 60 * 100; 
 
 const fetchRandomPhotos = createAsyncThunk('newsFeed/fetchRandomPhotos', async (page) => {
   const response = await axios.get(`https://api.unsplash.com/photos/random`, {
@@ -37,6 +37,8 @@ const newsFeedSlice = createSlice({
         state.error = null;
         state.hasMore = action.payload.length > 0;
         state.lastFetchedAt = Date.now();
+        
+
       })
       .addCase(fetchRandomPhotos.rejected, (state, action) => {
         state.loading = false;
