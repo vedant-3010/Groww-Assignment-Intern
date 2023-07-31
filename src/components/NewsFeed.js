@@ -40,7 +40,6 @@ const NewsFeed = () => {
           <PhotoCard key={photo.id} photo={photo} />
         ))}
       </InfiniteScroll>
-      {loading && <LoadingSpinner />}
       {error && (
         <p>
           {error.response?.status === 403
