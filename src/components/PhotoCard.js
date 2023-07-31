@@ -5,6 +5,7 @@ import {
   AiOutlineHeart,
   AiOutlineDownload,
 } from "react-icons/ai";
+
 const PhotoCard = ({ photo }) => {
   const { id, urls, user, likes, downloads, location, alt_description } = photo;
 

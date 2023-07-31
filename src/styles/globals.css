@@ -114,3 +114,17 @@ a:hover {
     transform: rotate(360deg);
   }
 }
+/* Dark theme styles */
+.dark-mode {
+  background-color: #000000;
+  color: #fff;
+  
+  
+
+}
+
+/* Light theme styles */
+.light-mode {
+  background-color: #fff;
+  color: #333;
+}
