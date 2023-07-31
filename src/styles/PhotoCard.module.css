@@ -1,0 +1,164 @@
+.photocard {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  background-color: #fff;
+  margin: auto;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.userinfo {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+
+}
+
+.userinfo img:hover {
+    cursor: pointer;
+}
+
+.usernamelocation {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.location {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #999;
+}
+
+.postimage {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #262626;
+}
+
+.photoinfo {
+  display: flex;
+  justify-content: flex-start;
+  padding: 12px;
+  align-items: center;
+  background-color: #f7f7f7;
+
+}
+
+.likes,
+.downloads {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.urls {
+  margin: 10px 0;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+}
+.urls a {
+  display: block;
+  margin-bottom: 5px;
+  color: #909090;
+}
+
+.urls a:hover {
+  text-decoration: underline;
+}
+.likes span {
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.hearticon {
+  color: #e74c3c;
+  font-size: 19px;
+  transition: color 0.3s ease;
+}
+
+.downloads span {
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.downloadicon {
+  color: #3fb72f;
+  font-size: 19px;
+}
+
+.photoinfo {
+  background-color: #f7f7f7;
+}
+
+.photoinfo p {
+  color: #262626;
+}
+
+/* Responsive Styles */
+@media (min-width: 400px) {
+  .photocard {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 622px) {
+  .photocard {
+    width: 85%;
+    padding: 8px;
+    margin: 20px auto;
+  }
+  .postimage {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #262626;
+  }
+  .userinfo {
+    padding: 8px;
+  }
+
+  .username {
+    font-size: 16px;
+  }
+
+  .location {
+    font-size: 14px;
+  }
+
+  .photoinfo {
+    padding: 8px;
+  }
+
+  .likes span {
+    font-size: 13px;
+  }
+
+  .hearticon {
+    font-size: 16px;
+  }
+}
