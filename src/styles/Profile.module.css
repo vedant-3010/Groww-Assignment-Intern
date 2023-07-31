@@ -146,4 +146,9 @@
   .userDetails .bio {
     display: none;
   }
+  .userDetails .stats {
+    flex-direction: row;
+    padding: 10px 0;
+  }
+  
 }

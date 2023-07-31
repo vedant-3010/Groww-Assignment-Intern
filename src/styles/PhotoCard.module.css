@@ -20,6 +20,11 @@
   display: flex;
   align-items: center;
   padding: 12px;
+
+}
+
+.userinfo img:hover {
+    cursor: pointer;
 }
 
 .usernamelocation {
@@ -49,15 +54,19 @@
 }
 
 .photoinfo {
+  display: flex;
+  justify-content: flex-start;
   padding: 12px;
   align-items: center;
   background-color: #f7f7f7;
+
 }
 
 .likes,
 .downloads {
   display: flex;
   align-items: center;
+  margin-right: 20px;
 }
 .urls {
   margin: 10px 0;
@@ -85,6 +94,7 @@
 .hearticon {
   color: #e74c3c;
   font-size: 19px;
+  transition: color 0.3s ease;
 }
 
 .downloads span {

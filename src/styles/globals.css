@@ -89,6 +89,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 .loading-spinner {
   display: flex;
   justify-content: center;
