@@ -1,8 +1,7 @@
-// redux/profileSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const API_KEY = 'QnAJ_PJE0cJQPm7z1eLB0Is9kOp_rIOI4jXnnnh_THs'; // Replace with your Unsplash API key
+const API_KEY = process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY;
 
 const fetchUserProfile = createAsyncThunk('profile/fetchUserProfile', async (username) => {
   const userResponse = await axios.get(`https://api.unsplash.com/users/${username}`, {

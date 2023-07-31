@@ -1,5 +1,5 @@
 // lib/unsplash.js
-const UNSPLASH_API_KEY = 'QnAJ_PJE0cJQPm7z1eLB0Is9kOp_rIOI4jXnnnh_THs';
+const UNSPLASH_API_KEY = process.env.NEXT_PUBLIC_UNSPLASH_API_KEY;
 
 export async function getRandomPhotos(page = 1, perPage = 10) {
   try {
@@ -11,7 +11,7 @@ export async function getRandomPhotos(page = 1, perPage = 10) {
       throw new Error('Network response was not ok');
     }
 
-    const data = await response.json(); // Extract JSON data from the response
+    const data = await response.json();
     return data;
   } catch (error) {
     console.error('Error fetching random photos:', error);
@@ -19,4 +19,3 @@ export async function getRandomPhotos(page = 1, perPage = 10) {
   }
 }
 
-// Rest of the code remains the same...

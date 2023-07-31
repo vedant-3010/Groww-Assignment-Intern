@@ -6,6 +6,7 @@ import profileReducer from './profileSlice';
 const rootReducer = combineReducers({
   newsFeed: newsFeedReducer,
   profile: profileReducer,
+
 });
 
 export default rootReducer;

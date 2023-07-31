@@ -1,4 +1,3 @@
-// components/LoadingSpinner.js
 import React from 'react';
 
 const LoadingSpinner = () => {
@@ -7,7 +6,7 @@ const LoadingSpinner = () => {
       <div className="spinner">
       </div>
     </div>
-    
+
   );
 };
 

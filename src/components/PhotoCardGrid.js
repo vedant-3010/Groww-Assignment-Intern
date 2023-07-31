@@ -1,4 +1,3 @@
-// components/PhotoCardGrid.js
 import React from 'react';
 import styles from '../styles/PhotoCardGrid.module.css'; // Import the CSS module for styling
 

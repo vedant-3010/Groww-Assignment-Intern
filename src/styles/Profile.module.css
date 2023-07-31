@@ -1,6 +1,3 @@
-/* Profile.module.css */
-
-/* Base styles for larger screens */
 .profile {
   max-width: 800px;
   padding: 20px;
@@ -11,7 +8,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .avatar {
@@ -140,15 +136,13 @@
   }
 }
 @media (max-width: 765px) {
-
-  .profile{
+  .profile {
     padding: 20px 0;
     max-width: 100%;
   }
-  
 }
 @media (max-width: 450px) {
-.userDetails .bio {
-  display: none;
-}
+  .userDetails .bio {
+    display: none;
+  }
 }

@@ -1,11 +1,9 @@
-/* styles/UserPhotos.module.css */
-
 .userPhotos {
   margin-top: 20px;
 }
 
 .gridContainer {
-  display: grid; 
+  display: grid;
   grid-template-columns: repeat(3, 1f);
   gap: 20px;
 }
@@ -21,8 +19,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-
 
 .gridRow {
   display: flex;
@@ -67,7 +63,7 @@
   height: 200px;
   object-fit: contain;
   border-radius: 5px;
-  background-color: black; /* Set the background color of the image to black */
+  background-color: black;
 }
 
 .photoinfo {
@@ -84,7 +80,7 @@
 .hearticon {
   font-size: 18px;
   margin-right: 5px;
-  color: #977a7b; /* Red color for the heart icon */
+  color: #977a7b;
 }
 
 .likes span {
@@ -95,7 +91,7 @@
 
 .imageDescription {
   font-size: 14px;
-  color: rgb(67, 67, 67); /* Set the description text color to white */
+  color: rgb(67, 67, 67);
   text-align: center;
   font-weight: 500;
 }

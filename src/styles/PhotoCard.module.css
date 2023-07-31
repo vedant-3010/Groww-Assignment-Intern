@@ -1,5 +1,3 @@
-/* PostCard.css */
-
 .photocard {
   width: 100%;
   max-width: 600px;
@@ -21,7 +19,7 @@
 .userinfo {
   display: flex;
   align-items: center;
-  padding: 12px; /* Add padding to the user info section */
+  padding: 12px;
 }
 
 .usernamelocation {
@@ -32,7 +30,7 @@
 .username {
   margin: 0;
   font-weight: bold;
-  font-size: 18px; /* Increase font size for the username */
+  font-size: 18px;
 }
 
 .location {
@@ -44,23 +42,22 @@
 .postimage {
   width: 100%;
   height: 400px;
-  object-fit: contain; /* Set to 'contain' to maintain aspect ratio */
+  object-fit: contain;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   background-color: #262626;
 }
 
 .photoinfo {
-  padding: 12px; /* Add padding to the photo info section */
-  display: flex;
+  padding: 12px;
   align-items: center;
-  background-color: #f7f7f7; /* Set a background color for the photo info section */
+  background-color: #f7f7f7;
 }
 
 .likes,
 .downloads {
-  display: flex; /* Display the icon and number side by side */
-  align-items: center; /* Center the elements vertically */
+  display: flex;
+  align-items: center;
 }
 .urls {
   margin: 10px 0;
@@ -73,8 +70,7 @@
 .urls a {
   display: block;
   margin-bottom: 5px;
-  color: #909090; /* Set a primary color for links */
-  text-decoration: none;
+  color: #909090;
 }
 
 .urls a:hover {
@@ -102,7 +98,6 @@
   font-size: 19px;
 }
 
-/* Add Instagram-like styles */
 .photoinfo {
   background-color: #f7f7f7;
 }
@@ -111,51 +106,49 @@
   color: #262626;
 }
 
-
 /* Responsive Styles */
 @media (min-width: 400px) {
   .photocard {
     width: 90%;
-    margin: 20px auto; /* Center the card and add 20% margin on each side */
+    margin: 20px auto;
   }
-  
 }
 
 @media (max-width: 622px) {
   .photocard {
-    width: 85%; /* Adjust the width for smaller screens */
-    padding: 8px; /* Reduce the padding for mobile view */
+    width: 85%;
+    padding: 8px;
     margin: 20px auto;
   }
   .postimage {
     width: 100%;
     height: 300px;
-    object-fit: contain; /* Set to 'contain' to maintain aspect ratio */
+    object-fit: contain;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     background-color: #262626;
   }
   .userinfo {
-    padding: 8px; /* Reduce the padding for mobile view */
+    padding: 8px;
   }
 
   .username {
-    font-size: 16px; /* Reduce font size for the username on smaller screens */
+    font-size: 16px;
   }
 
   .location {
-    font-size: 14px; /* Reduce font size for the location on smaller screens */
+    font-size: 14px;
   }
 
   .photoinfo {
-    padding: 8px; /* Reduce the padding for mobile view */
+    padding: 8px;
   }
 
   .likes span {
-    font-size: 13px; /* Reduce font size for icons and numbers on smaller screens */
+    font-size: 13px;
   }
 
   .hearticon {
-    font-size: 16px; /* Reduce font size for the heart icon on smaller screens */
+    font-size: 16px;
   }
 }

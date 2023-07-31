@@ -1,10 +1,10 @@
 import React from 'react';
 import PhotoCard from './PhotoCard';
-import styles from '../styles/UserPhotos.module.css'; // Import the CSS module for styling
+import styles from '../styles/UserPhotos.module.css';
 import PhotoCardGrid from './PhotoCardGrid';
 
 const UserPhotos = ({ photos, gridView }) => {
-  
+
   return (
     <div className={styles.userPhotos}>
       {gridView ? (

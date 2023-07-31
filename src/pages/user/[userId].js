@@ -1,4 +1,3 @@
-// pages/user/[userId].js
 import { useRouter } from 'next/router';
 import Profile from '../../components/Profile';
 

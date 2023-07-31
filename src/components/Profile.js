@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUserProfile } from '../redux/profileSlice';
 import UserPhotos from './UserPhotos';
-import styles from '../styles/Profile.module.css'; // Import the CSS module for styling
+import styles from '../styles/Profile.module.css';
+import LoadingSpinner from './LoadingSpinner';
 
 const Profile = ({ username }) => {
   const dispatch = useDispatch();
@@ -16,14 +17,16 @@ const Profile = ({ username }) => {
   }, [dispatch, username]);
 
   if (!user) {
-    return <div>Loading...</div>;
+    return <div>
+      <LoadingSpinner />
+    </div>;
   }
 
   return (
     <div className={styles.profile}>
       <div className={styles.userInfo}>
         <img
-          src={user.profile_image.large} // Assuming you have the URL for large profile image
+          src={user.profile_image.large}
           alt={user.name}
           className={styles.avatar}
         />

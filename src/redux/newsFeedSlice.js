@@ -1,10 +1,9 @@
-// redux/newsFeedSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const API_KEY = 'QnAJ_PJE0cJQPm7z1eLB0Is9kOp_rIOI4jXnnnh_THs'; // Replace with your Unsplash API key
+const API_KEY = process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY;
 
-const CACHE_DURATION = (60 * 1000)*3; // Cache data for 1 minute (in milliseconds)
+const CACHE_DURATION = (60 * 1000) * 3; // Cache data for 4 minute
 
 const fetchRandomPhotos = createAsyncThunk('newsFeed/fetchRandomPhotos', async (page) => {
   const response = await axios.get(`https://api.unsplash.com/photos/random`, {
@@ -24,7 +23,7 @@ const newsFeedSlice = createSlice({
     loading: false,
     error: null,
     hasMore: true,
-    lastFetchedAt: null, // Track the timestamp of the last API response
+    lastFetchedAt: null,
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -36,8 +35,8 @@ const newsFeedSlice = createSlice({
         state.photos = [...state.photos, ...action.payload];
         state.loading = false;
         state.error = null;
-        state.hasMore = action.payload.length > 0; // Set hasMore based on the API response
-        state.lastFetchedAt = Date.now(); // Record the timestamp of the last API response
+        state.hasMore = action.payload.length > 0;
+        state.lastFetchedAt = Date.now();
       })
       .addCase(fetchRandomPhotos.rejected, (state, action) => {
         state.loading = false;
