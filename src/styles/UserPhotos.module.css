@@ -17,6 +17,7 @@
 @media (max-width: 764px) {
   .gridContainer {
     grid-template-columns: repeat(2, 1fr);
+    margin: auto 10px;
   }
 }
 

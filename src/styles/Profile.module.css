@@ -116,6 +116,7 @@
 
 /* Mobile styles using media query */
 @media (max-width: 765px) {
+  
   .userInfo {
     flex-direction: column;
     text-align: center;
