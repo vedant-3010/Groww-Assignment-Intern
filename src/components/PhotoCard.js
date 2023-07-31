@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '../styles/PhotoCard.module.css';
-import LazyLoad from 'react-lazy-load"';
-
 const PhotoCard = ({ photo }) => {
   const { id, urls, user, likes, downloads, location, alt_description } = photo;
 
@@ -25,10 +23,7 @@ const PhotoCard = ({ photo }) => {
           </p>
         </div>
       </div>
-      {/* Wrap the image with LazyLoad */}
-      <LazyLoad height={200} offset={100}>
         <img src={urls.regular} alt={alt_description} className={styles.postimage} />
-      </LazyLoad>
       <div className={styles.urls}>
         <p>Other sizes: </p>
         <a href={urls.small} target="_blank" rel="noopener noreferrer">
