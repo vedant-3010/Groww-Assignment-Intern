@@ -67,3 +67,4 @@ const PhotoCard = ({ photo }) => {
 };
 
 export default PhotoCard;
+
